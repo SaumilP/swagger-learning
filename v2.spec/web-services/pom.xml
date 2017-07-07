@@ -10,7 +10,7 @@
 
     <groupId>org.sandcastle.apps.swagger</groupId>
     <artifactId>second-spec</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>Web Services</name>
 
@@ -103,7 +103,7 @@
         <dependency>
             <groupId>org.sandcastle.apps.swagger</groupId>
             <artifactId>web-services-models</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

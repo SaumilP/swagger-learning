@@ -5,12 +5,13 @@
     <parent>
         <groupId>org.sandcastle.microservices</groupId>
         <artifactId>swagger.v2.spec.demo.parent</artifactId>
-        <version>0.0.1</version>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
 
     <groupId>org.sandcastle.apps.swagger</groupId>
     <artifactId>web-services-models</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <name>Application models</name>
 
     <properties>

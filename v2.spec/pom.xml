@@ -6,7 +6,7 @@
 
     <groupId>org.sandcastle.microservices</groupId>
     <artifactId>swagger.v2.spec.demo.parent</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Swagger v2 Demo Application</name>
