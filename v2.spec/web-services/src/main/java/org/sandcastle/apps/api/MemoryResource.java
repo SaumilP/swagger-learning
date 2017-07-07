@@ -12,22 +12,22 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 @RequestMapping("/api")
 @ConfigurationProperties(prefix = "memories")
-public class MemoryController {
+public class MemoryResource extends ApiResource {
 
-    private RestTemplate template = new RestTemplate();
-    private String memoryServiceHost;
-    private int memoryServicePort;
+    public MemoryResource(RestTemplate template) {
+        super(template);
+    }
 
     @GetMapping(value = "/memories", produces = "application/json")
     public Memories getMemories() {
         return null;
     }
 
-    @GetMapping(value = "/memories/{mid}", produces = "application/json")
+    @GetMapping(value = "/memory/{mid}", produces = "application/json")
     public Memories findMemories(@PathVariable String mid) {
-        MemoriesCommand memoryCommand = new MemoriesCommand(memoryServiceHost, memoryServicePort)
+        MemoriesCommand memoryCommand = new MemoriesCommand(getServiceHost(), getServicePort())
                 .withMemoryId(mid)
-                .withTemplate(template);
+                .withTemplate(getTemplate());
         return memoryCommand.execute();
     }
 }

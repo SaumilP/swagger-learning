@@ -12,17 +12,17 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 @RequestMapping("/api")
 @ConfigurationProperties(prefix = "person")
-public class PersonController {
+public class PersonResource extends ApiResource {
 
-    private RestTemplate template = new RestTemplate();
-    private String personServiceHost;
-    private int personServicePort;
+    public PersonResource(RestTemplate template) {
+        super(template);
+    }
 
     @GetMapping(value = "/person/{personId}", produces = "application/json")
-    public Person findPerson(@PathVariable String personId){
-        PersonCommand personCommand = new PersonCommand(personServiceHost, personServicePort)
+    public Person findPerson(@PathVariable String personId) {
+        PersonCommand personCommand = new PersonCommand(getServiceHost(), getServicePort())
                 .withPersonId(personId)
-                .withTemplate(template);
+                .withTemplate(getTemplate());
         return personCommand.execute();
     }
 }
