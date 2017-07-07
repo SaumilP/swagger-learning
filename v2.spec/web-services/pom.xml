@@ -11,7 +11,7 @@
     <groupId>org.sandcastle.apps.swagger</groupId>
     <artifactId>second-spec</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>Web Services</name>
 
     <properties>
