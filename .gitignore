@@ -1,4 +1,4 @@
-target
+target/
 .metadata
 .settings
 .classpath
@@ -10,4 +10,5 @@ target
 *.ear
 *.iml
 *.uml
-.idea
+.idea/
+
