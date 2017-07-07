@@ -10,7 +10,7 @@
     <properties>
         <!-- Project -->
         <jetty-maven-plugin.version>9.3.7.v20160115</jetty-maven-plugin.version>
-        <jetty.http.port>8080</jetty.http.port>
+        <jetty.http.port>8081</jetty.http.port>
         <maven-compiler-plugin.version>3.5</maven-compiler-plugin.version>
         <maven-war-plugin.version>2.6</maven-war-plugin.version>
         <servlet-version>2.5</servlet-version>
@@ -29,7 +29,7 @@
         <!-- Fabric8/Kubernetes/OpenShift-->
         <fabric8.dockerUser>fabric8/</fabric8.dockerUser>
         <fabric8.service.name>${project.artifactId}</fabric8.service.name>
-        <fabric8.service.port>80</fabric8.service.port>
+        <fabric8.service.port>81</fabric8.service.port>
         <fabric8.service.containerPort>${jetty.http.port}</fabric8.service.containerPort>
         <fabric8.service.type>LoadBalancer</fabric8.service.type>
     </properties>
@@ -142,6 +142,15 @@
         </profile>
         <profile>
             <id>f8-local-deploy</id>
+            <build>
+                <defaultGoal>fabric8:json fabric8:apply</defaultGoal>
+            </build>
+            <properties>
+                <fabric8.recreate>true</fabric8.recreate>
+            </properties>
+        </profile>
+        <profile>
+            <id>f8-local-create-deploy</id>
             <build>
                 <defaultGoal>clean install docker:build fabric8:json fabric8:apply</defaultGoal>
             </build>

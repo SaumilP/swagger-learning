@@ -43,7 +43,7 @@
         <fabric8.service.type>LoadBalancer</fabric8.service.type>
         <fabric8.serviceAccount>ribbon</fabric8.serviceAccount>
         <fabric8.env.MEMORY_BACKENDSERVICEHOST>backend/memory</fabric8.env.MEMORY_BACKENDSERVICEHOST>
-        <fabric8.env.MEMORY_BACKENDSERVICEPORT>80</fabric8.env.MEMORY_BACKENDSERVICEPORT>
+        <fabric8.env.MEMORY_BACKENDSERVICEPORT>81</fabric8.env.MEMORY_BACKENDSERVICEPORT>
         <fabric8.env.PERSON_BACKENDSERVICEHOST>backend/person</fabric8.env.PERSON_BACKENDSERVICEHOST>
         <fabric8.env.PERSON_BACKENDSERVICEPORT>80</fabric8.env.PERSON_BACKENDSERVICEPORT>
         <fabric8.env.USE_KUBERNETES_DISCOVERY>true</fabric8.env.USE_KUBERNETES_DISCOVERY>
