@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 
 @RestController
 @RequestMapping("/api")
-@ConfigurationProperties(prefix = "memories")
+@ConfigurationProperties(prefix = "memory")
 public class MemoryResource extends ApiResource {
 
     public MemoryResource(RestTemplate template) {
@@ -24,7 +24,7 @@ public class MemoryResource extends ApiResource {
     }
 
     @GetMapping(value = "/memory/{mid}", produces = "application/json")
-    public Memories findMemories(@PathVariable String mid) {
+    public Memories findMemory(@PathVariable String mid) {
         MemoriesCommand memoryCommand = new MemoriesCommand(getServiceHost(), getServicePort())
                 .withMemoryId(mid)
                 .withTemplate(getTemplate());
